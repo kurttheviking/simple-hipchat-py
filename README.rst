@@ -34,10 +34,10 @@ Example methods::
 Two handy shortcut methods::
 
     # List rooms, print response JSON
-    print hipster.rooms_list()
+    print hipster.list_rooms()
 
     # POST a message to a room, print response JSON
-    print hipster.room_message(8675309, 'HAL', 'All your base...')
+    print hipster.message_room(8675309, 'HAL', 'All your base...')
 
 
 .. _`HipChat API`: https://www.hipchat.com/docs/api

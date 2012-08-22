@@ -79,13 +79,13 @@ class HipChat(object):
 
         return json.loads(response)
 
-    def rooms_list(self):
+    def list_rooms(self):
         return self.method('rooms/list')
 
-    def room_message(self, room_id='', message_from='', message='', message_format='text', color='', notify=False):
+    def message_room(self, room_id='', message_from='', message='', message_format='text', color='', notify=False):
         parameters = dict()
         parameters['room_id'] = room_id
-        parameters['from'] = message_from
+        parameters['from'] = message_from[:15]
         parameters['message'] = message
         parameters['message_format'] = message_format
         parameters['color'] = color
