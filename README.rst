@@ -14,9 +14,13 @@ None beyond the Python standard library.
 Usage
 -----
 
+Install::
+
+    pip install python-simple-hipchat
+
 Instantiate::
 
-    import hipchat.py
+    import hipchat
     hipster = hipchat.HipChat(token=YourHipChatToken)
 
 Request a URI endpoint as described in the HipChat API docs::
@@ -27,10 +31,10 @@ Example methods::
 
     # List rooms
     hipster.method('rooms/list')
-    
+
     # Post a message to a HipChat room
     hipster.method('rooms/message', method='POST', parameters={'room_id': 8675309, 'from': 'HAL', 'message': 'All your base...'})
-    
+
 Two handy shortcut methods::
 
     # List rooms, print response JSON
