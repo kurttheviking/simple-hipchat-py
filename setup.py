@@ -6,6 +6,7 @@ setup(
     version='0.1',
     packages=['hipchat'],
     author='Kurt Ericson',
+    author_email='kurttheviking@outlook.com',
     license='MIT',
     long_description=open('README.rst').read()
 )
