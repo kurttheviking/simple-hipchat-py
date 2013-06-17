@@ -26,7 +26,7 @@ class HipChat(object):
                 return self.method
             return urllib2.Request.get_method(self)
 
-    def method(self, url, method="GET", parameters=None):
+    def method(self, url, method="GET", parameters=None, timeout=None):
         method_url = urljoin(self.url, url)
 
         if method == "GET":
@@ -52,7 +52,7 @@ class HipChat(object):
         method_url = method_url + '?' + query_string
 
         req = self.RequestWithMethod(method_url, http_method=method, data=request_data)
-        response = self.opener.open(req).read()
+        response = self.opener.open(req, None, timeout).read()
 
         return json.loads(response)
 
