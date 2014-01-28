@@ -1,6 +1,11 @@
-from urlparse import urljoin
-from urllib import urlencode
-import urllib2
+try:
+    from urllib.parse import urljoin
+    from urllib.parse import urlencode
+    import urllib.request as urlrequest
+except ImportError:
+    from urlparse import urljoin
+    from urllib import urlencode
+    import urllib2 as urlrequest
 import json
 
 
@@ -13,18 +18,18 @@ class HipChat(object):
         self.url = url
         self.token = token
         self.format = format
-        self.opener = urllib2.build_opener(urllib2.HTTPSHandler())
+        self.opener = urlrequest.build_opener(urlrequest.HTTPSHandler())
 
-    class RequestWithMethod(urllib2.Request):
+    class RequestWithMethod(urlrequest.Request):
         def __init__(self, url, data=None, headers={}, origin_req_host=None, unverifiable=False, http_method=None):
-            urllib2.Request.__init__(self, url, data, headers, origin_req_host, unverifiable)
+            urlrequest.Request.__init__(self, url, data, headers, origin_req_host, unverifiable)
             if http_method:
                 self.method = http_method
 
         def get_method(self):
             if self.method:
                 return self.method
-            return urllib2.Request.get_method(self)
+            return urlrequest.Request.get_method(self)
 
     def method(self, url, method="GET", parameters=None, timeout=None):
         method_url = urljoin(self.url, url)
@@ -45,7 +50,7 @@ class HipChat(object):
             query_string = urlencode(query_parameters)
 
             if parameters:
-                request_data = urlencode(parameters)
+                request_data = urlencode(parameters).encode('utf-8')
             else:
                 request_data = None
 
@@ -54,7 +59,7 @@ class HipChat(object):
         req = self.RequestWithMethod(method_url, http_method=method, data=request_data)
         response = self.opener.open(req, None, timeout).read()
 
-        return json.loads(response)
+        return json.loads(response.decode('utf-8'))
 
     def list_rooms(self):
         return self.method('rooms/list')
