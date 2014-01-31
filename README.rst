@@ -1,5 +1,5 @@
-(Super simple) Python Module for HipChat API
-==================================
+(Super simple) Python HipChat
+=============================
 
 Description
 -----------
