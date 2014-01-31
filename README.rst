@@ -4,12 +4,13 @@
 Description
 -----------
 
-Easy peasy wrapper for the `HipChat API`_. Exposes core URI endpoint wrapper and some basic methods for common integrations.
+Easy peasy wrapper for the `HipChat API <https://www.hipchat.com/docs/api>`_. Exposes core URI endpoint wrapper and some basic methods for common integrations.
 
 
 Dependencies
 ------------
 None beyond the Python standard library.
+
 
 Usage
 -----
@@ -44,4 +45,14 @@ Two handy shortcut methods::
     print hipster.message_room(8675309, 'HAL', 'All your base...')
 
 
-.. _`HipChat API`: https://www.hipchat.com/docs/api
+Changelog
+---------
+
+**v0.2.0**
+
+- `Added Python 3 support without losing support for Python 2 <https://github.com/kurttheviking/python-simple-hipchat/pull/9>`_ (thanks @pimterry)
+- `Expose timeout for safer synchronous use <https://github.com/kurttheviking/python-simple-hipchat/pull/3>`_ (thanks @zachsnow)
+
+**v0.1.0**
+
+- Added shortcut methods for messaging a room
