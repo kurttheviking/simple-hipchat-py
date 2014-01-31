@@ -55,4 +55,5 @@ Changelog
 
 **v0.1.0**
 
-- Added shortcut methods for messaging a room
+- Added shortcut method for messaging a room
+- Added shortcut method for listing rooms (requires admin token)
