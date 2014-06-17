@@ -47,6 +47,9 @@ Some handy shortcut methods::
     # List users, print response JSON
     print hipster.list_users()
 
+    # Find user by name. 
+    hipster.find_user('John Doe')
+
     # POST a message to a room, print response JSON
     print hipster.message_room(8675309, 'HAL', 'All your base...')
 
