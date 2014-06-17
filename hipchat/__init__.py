@@ -83,5 +83,5 @@ class HipChat(object):
         rooms = self.list_rooms()['rooms']
         for x in range(0, len(rooms)):
             if rooms[x]['name'] == room_name:
-                return rooms[x].['room_id']
+                return rooms[x]['room_id']
         return None
