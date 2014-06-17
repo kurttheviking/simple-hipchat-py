@@ -57,6 +57,12 @@ Some handy shortcut methods::
 Changelog
 ---------
 
+**v0.3.0**
+
+- Added shortcut method for listing users
+- Added shortcut method for finding user by name
+- Added shortcut method for finding room by name
+
 **v0.2.0**
 
 - `Added Python 3 support without losing support for Python 2 <https://github.com/kurttheviking/python-simple-hipchat/pull/9>`_ (thanks @pimterry)
