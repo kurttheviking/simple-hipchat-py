@@ -88,3 +88,9 @@ class HipChat(object):
             if rooms[x]['name'] == room_name:
                 return rooms[x]
         return None 
+
+    def find_user(self, user_name=''):
+        users = self.list_users()['users']
+        for x in range(0, len(users)):
+            if users[x]['name'] == user_name:
+                return users[x]
