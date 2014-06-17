@@ -79,9 +79,9 @@ class HipChat(object):
 
         return self.method('rooms/message', 'POST', parameters)
 
-    def get_room_id_by_name(self, room_name=''):
+    def find_room(self, room_name=''):
         rooms = self.list_rooms()['rooms']
         for x in range(0, len(rooms)):
             if rooms[x]['name'] == room_name:
-                return rooms[x]['room_id']
-        return None
+                return rooms[x]
+        return None 
