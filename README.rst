@@ -36,8 +36,8 @@ Example methods::
     # Post a message to a HipChat room
     hipster.method('rooms/message', method='POST', parameters={'room_id': 8675309, 'from': 'HAL', 'message': 'All your base...'})
 
-    # Get room ID using the room's name
-    hipster.get_room_id_by_name('name')
+    # Find room by name. 
+    hipster.find_room('name')
 
 Two handy shortcut methods::
 
