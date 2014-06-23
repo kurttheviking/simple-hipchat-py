@@ -64,6 +64,9 @@ class HipChat(object):
     def list_rooms(self):
         return self.method('rooms/list')
 
+    def list_users(self):
+        return self.method('users/list')
+
     def message_room(self, room_id='', message_from='', message='', message_format='text', color='', notify=False):
         parameters = dict()
         parameters['room_id'] = room_id
@@ -78,3 +81,16 @@ class HipChat(object):
             parameters['notify'] = 0
 
         return self.method('rooms/message', 'POST', parameters)
+
+    def find_room(self, room_name=''):
+        rooms = self.list_rooms()['rooms']
+        for x in range(0, len(rooms)):
+            if rooms[x]['name'] == room_name:
+                return rooms[x]
+        return None 
+
+    def find_user(self, user_name=''):
+        users = self.list_users()['users']
+        for x in range(0, len(users)):
+            if users[x]['name'] == user_name:
+                return users[x]

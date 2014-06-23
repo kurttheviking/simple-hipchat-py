@@ -36,10 +36,19 @@ Example methods::
     # Post a message to a HipChat room
     hipster.method('rooms/message', method='POST', parameters={'room_id': 8675309, 'from': 'HAL', 'message': 'All your base...'})
 
-Two handy shortcut methods::
+Some handy shortcut methods::
 
     # List rooms, print response JSON
     print hipster.list_rooms()
+    
+    # Find room by name. 
+    hipster.find_room('name')
+
+    # List users, print response JSON
+    print hipster.list_users()
+
+    # Find user by name. 
+    hipster.find_user('John Doe')
 
     # POST a message to a room, print response JSON
     print hipster.message_room(8675309, 'HAL', 'All your base...')
@@ -47,6 +56,12 @@ Two handy shortcut methods::
 
 Changelog
 ---------
+
+**v0.3.0**
+
+- Added shortcut method for listing users
+- Added shortcut method for finding user by name
+- Added shortcut method for finding room by name
 
 **v0.2.0**
 
