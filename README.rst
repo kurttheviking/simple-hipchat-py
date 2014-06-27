@@ -59,9 +59,9 @@ Changelog
 
 **v0.3.0**
 
-- Added shortcut method for listing users
-- Added shortcut method for finding user by name
-- Added shortcut method for finding room by name
+- Added shortcut method for listing users (thanks @Raizex)
+- Added shortcut method for finding user by name (thanks @Raizex)
+- Added shortcut method for finding room by name (thanks @Raizex)
 
 **v0.2.0**
 
