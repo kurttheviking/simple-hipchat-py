@@ -57,18 +57,18 @@ Some handy shortcut methods::
 Changelog
 ---------
 
-**v0.3.0**
+**v0.3.x**
 
 - Added shortcut method for listing users (thanks @Raizex)
 - Added shortcut method for finding user by name (thanks @Raizex)
 - Added shortcut method for finding room by name (thanks @Raizex)
 
-**v0.2.0**
+**v0.2.x**
 
 - `Added Python 3 support without losing support for Python 2 <https://github.com/kurttheviking/python-simple-hipchat/pull/9>`_ (thanks @pimterry)
 - `Expose timeout for safer synchronous use <https://github.com/kurttheviking/python-simple-hipchat/pull/3>`_ (thanks @zachsnow)
 
-**v0.1.0**
+**v0.1.x**
 
 - Added shortcut method for messaging a room
 - Added shortcut method for listing rooms (requires admin token)
