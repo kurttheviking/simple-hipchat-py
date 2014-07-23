@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(
-	description="Easy peasy wrapper for HipChat's v1 API",
+    description="Easy peasy wrapper for HipChat's v1 API",
     name='python-simple-hipchat',
     url='https://github.com/kurttheviking/python-simple-hipchat',
     version='0.3.2',
