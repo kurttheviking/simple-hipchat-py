@@ -10,5 +10,15 @@ setup(
     author='Kurt Ericson',
     author_email='kurttheviking@outlook.com',
     license='MIT',
-    long_description=open('README.rst').read()
+    long_description=open('README.rst').read(),
+    classifiers=[
+        'Development Status :: 5 - Production/Stable',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.3',
+        'Programming Language :: Python :: Implementation :: CPython',
+    ],
 )
