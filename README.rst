@@ -62,7 +62,8 @@ API Sugar
     
 **Find room by name**::
 
-    hipster.find_room('name')
+    room = hipster.find_room('Room Name')
+    print "Room Name has room id = %s" % (room['room_id'])
 
 **List users**::
 
@@ -70,7 +71,8 @@ API Sugar
 
 **Find user by name**::
 
-    hipster.find_user('John Doe')
+    user = hipster.find_user('Raleigh Becket')
+    print "Raleigh Becket's status is = %s" % (user['status'])
 
 
 
