@@ -40,7 +40,7 @@ Example::
 API Sugar
 ---------
 
-To post a message to a room, either a Notification or Admin token can be used. All other methods require an Admin token. See `HipChat's auth docs <https://www.hipchat.com/docs/api/auth>`_ for more information
+To send a message to a room, either a Notification or Admin token can be used. All other methods require an Admin token. See `HipChat's auth docs <https://www.hipchat.com/docs/api/auth>`_ for more information.
 
 **Send a message to a room**::
 
