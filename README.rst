@@ -40,7 +40,7 @@ Example::
 API Sugar
 ---------
 
-**Send a message to a room
+**Send a message to a room**
 
     room_id = 8675309
     from_name = 'HAL'
