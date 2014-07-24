@@ -62,6 +62,7 @@ Changelog
 - Added shortcut method for listing users (thanks @Raizex)
 - Added shortcut method for finding user by name (thanks @Raizex)
 - Added shortcut method for finding room by name (thanks @Raizex)
+- Added [trove classifiers](https://pypi.python.org/pypi?%3Aaction=list_classifiers) (thanks @ghickman)
 
 **v0.2.x**
 
