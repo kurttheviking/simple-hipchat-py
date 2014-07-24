@@ -40,6 +40,8 @@ Example::
 API Sugar
 ---------
 
+To post a message to a room, either a Notification or Admin token can be used. All other methods require an Admin token. See `HipChat's auth docs <https://www.hipchat.com/docs/api/auth>`_ for more information
+
 **Send a message to a room**::
 
     room_id = 8675309
@@ -94,4 +96,4 @@ Changelog
 **v0.1.x**
 
 - Added shortcut method for messaging a room
-- Added shortcut method for listing rooms (requires admin token)
+- Added shortcut method for listing rooms
