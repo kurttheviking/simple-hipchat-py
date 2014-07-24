@@ -46,7 +46,7 @@ API Sugar
     from_name = 'HAL'
     message = 'All your base...'
 
-    print hipster.message_room(room_id, from_name, message)
+    hipster.message_room(room_id, from_name, message)
 
 **List rooms**::
  
