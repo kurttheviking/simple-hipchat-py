@@ -28,7 +28,7 @@ Request a URI endpoint as described in the HipChat API docs::
 
     hipster.method(url='method/url/', method="GET/POST", parameters={'name':'value', })
 
-Example methods::
+Example::
 
     # List rooms
     hipster.method('rooms/list')
@@ -36,22 +36,34 @@ Example methods::
     # Post a message to a HipChat room
     hipster.method('rooms/message', method='POST', parameters={'room_id': 8675309, 'from': 'HAL', 'message': 'All your base...'})
 
-Some handy shortcut methods::
 
-    # List rooms, print response JSON
-    print hipster.list_rooms()
+API Sugar
+---------
+
+**Send a message to a room
+
+    room_id = 8675309
+    from_name = 'HAL'
+    message = 'All your base...'
+
+    print hipster.message_room(room_id, from_name, message)
+
+**List rooms**
+ 
+    hipster.list_rooms()
     
-    # Find room by name. 
+**Find room by name**
+
     hipster.find_room('name')
 
-    # List users, print response JSON
-    print hipster.list_users()
+**List users**
 
-    # Find user by name. 
+    hipster.list_users()
+
+**Find user by name**
+
     hipster.find_user('John Doe')
 
-    # POST a message to a room, print response JSON
-    print hipster.message_room(8675309, 'HAL', 'All your base...')
 
 
 Changelog
