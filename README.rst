@@ -48,6 +48,11 @@ API Sugar
 
     hipster.message_room(room_id, from_name, message)
 
+    message_color = 'red'
+
+    hipster.message_room(room_id, from_name, message, color=message_color)
+
+
 **List rooms**::
  
     hipster.list_rooms()
