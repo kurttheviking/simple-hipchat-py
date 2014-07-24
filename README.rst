@@ -40,7 +40,7 @@ Example::
 API Sugar
 ---------
 
-**Send a message to a room**
+**Send a message to a room**::
 
     room_id = 8675309
     from_name = 'HAL'
@@ -48,19 +48,19 @@ API Sugar
 
     print hipster.message_room(room_id, from_name, message)
 
-**List rooms**
+**List rooms**::
  
     hipster.list_rooms()
     
-**Find room by name**
+**Find room by name**::
 
     hipster.find_room('name')
 
-**List users**
+**List users**::
 
     hipster.list_users()
 
-**Find user by name**
+**Find user by name**::
 
     hipster.find_user('John Doe')
 
