@@ -4,7 +4,7 @@
 Description
 -----------
 
-Easy peasy wrapper for the `HipChat API <https://www.hipchat.com/docs/api>`_. Exposes core URI endpoint wrapper and some basic methods for common integrations.
+Easy peasy wrapper for the `HipChat API v1 <https://www.hipchat.com/docs/api>`_. Exposes core URI endpoint wrapper and some basic methods for common integrations.
 
 
 Dependencies
@@ -48,10 +48,13 @@ API Sugar
 
     hipster.message_room(room_id, from_name, message)
 
-    message_color = 'red'
-
+    # per HipChat, color can be "yellow", "red", "green", "purple", "gray", or "random"
+    message_color = 'gray'
     hipster.message_room(room_id, from_name, message, color=message_color)
 
+    # notify users in the room
+    message_color = 'red'
+    hipster.message_room(room_id, from_name, message, color=message_color, notify=True)
 
 **List rooms**::
  
