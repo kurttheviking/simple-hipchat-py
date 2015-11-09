@@ -5,7 +5,7 @@ setup(
     description="Easy peasy wrapper for HipChat's v1 API",
     name='python-simple-hipchat',
     url='https://github.com/kurttheviking/simple-hipchat-py',
-    version='0.3.3',
+    version='0.4.0',
     packages=['hipchat'],
     author='Kurt Ericson',
     author_email='kurttheviking@outlook.com',
