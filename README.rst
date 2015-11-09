@@ -83,7 +83,7 @@ Changelog
 
 **v0.4.x**
 
-- Added shortcut method for single room info (thanks @claudyus)
+- `Added shortcut method for single room info <https://github.com/kurttheviking/simple-hipchat-py/pull/16>`_ (thanks @claudyus)
 - Renamed GitHub repo
 
 **v0.3.x**
