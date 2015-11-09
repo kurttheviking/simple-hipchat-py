@@ -1,5 +1,5 @@
-(Super simple) Python HipChat
-=============================
+Python Client for HipChat v1
+============================
 
 Description
 -----------
