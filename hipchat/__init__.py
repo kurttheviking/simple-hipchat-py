@@ -64,6 +64,11 @@ class HipChat(object):
     def list_rooms(self):
         return self.method('rooms/list')
 
+    def info_room(self, room_id=''):
+        parameters = dict()
+        parameters['room_id'] = room_id
+        return self.method('rooms/show', parameters=parameters)
+
     def list_users(self):
         return self.method('users/list')
 
