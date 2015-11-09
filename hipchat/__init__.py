@@ -61,13 +61,21 @@ class HipChat(object):
 
         return json.loads(response.decode('utf-8'))
 
+    def find_room(self, room_name=''):
+        rooms = self.list_rooms()['rooms']
+        for x in range(0, len(rooms)):
+            if rooms[x]['name'] == room_name:
+                return rooms[x]
+        return None
+
+    def find_user(self, user_name=''):
+        users = self.list_users()['users']
+        for x in range(0, len(users)):
+            if users[x]['name'] == user_name:
+                return users[x]
+
     def list_rooms(self):
         return self.method('rooms/list')
-
-    def info_room(self, room_id=''):
-        parameters = dict()
-        parameters['room_id'] = room_id
-        return self.method('rooms/show', parameters=parameters)
 
     def list_users(self):
         return self.method('users/list')
@@ -87,15 +95,7 @@ class HipChat(object):
 
         return self.method('rooms/message', 'POST', parameters)
 
-    def find_room(self, room_name=''):
-        rooms = self.list_rooms()['rooms']
-        for x in range(0, len(rooms)):
-            if rooms[x]['name'] == room_name:
-                return rooms[x]
-        return None 
-
-    def find_user(self, user_name=''):
-        users = self.list_users()['users']
-        for x in range(0, len(users)):
-            if users[x]['name'] == user_name:
-                return users[x]
+    def show_room(self, room_id=''):
+        parameters = dict()
+        parameters['room_id'] = room_id
+        return self.method('rooms/show', parameters=parameters)

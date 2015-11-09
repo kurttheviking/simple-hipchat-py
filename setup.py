@@ -4,7 +4,7 @@ from setuptools import setup
 setup(
     description="Easy peasy wrapper for HipChat's v1 API",
     name='python-simple-hipchat',
-    url='https://github.com/kurttheviking/python-simple-hipchat',
+    url='https://github.com/kurttheviking/simple-hipchat-py',
     version='0.3.3',
     packages=['hipchat'],
     author='Kurt Ericson',
@@ -20,5 +20,5 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: Implementation :: CPython',
-    ],
+    ]
 )

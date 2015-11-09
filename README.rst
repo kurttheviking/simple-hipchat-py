@@ -59,9 +59,9 @@ To send a message to a room, either a Notification or Admin token can be used. A
     hipster.message_room(room_id, from_name, message, color=message_color, notify=True)
 
 **List rooms**::
- 
+
     hipster.list_rooms()
-    
+
 **Find room by name**::
 
     room = hipster.find_room('Room Name')
@@ -80,6 +80,11 @@ To send a message to a room, either a Notification or Admin token can be used. A
 
 Changelog
 ---------
+
+**v0.4.x**
+
+- Added shortcut method for single room info (thanks @claudyus)
+- Renamed GitHub repo
 
 **v0.3.x**
 
